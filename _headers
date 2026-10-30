@@ -1,0 +1,21 @@
+# ==============================================================================
+# ZWEN POTERIE — CLOUDFLARE PAGES / NETLIFY EDGE CACHING & SECURITY HEADERS
+# Ensures ultra-fast repeat photo loading from 330+ global CDN edge servers.
+# ==============================================================================
+
+/images/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/*.css
+  Cache-Control: public, max-age=86400, stale-while-revalidate=604800
+
+/*.js
+  Cache-Control: public, max-age=86400, stale-while-revalidate=604800
+
+/*.json
+  Cache-Control: public, max-age=300, stale-while-revalidate=3600
+
+/*
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: SAMEORIGIN
+  Referrer-Policy: strict-origin-when-cross-origin

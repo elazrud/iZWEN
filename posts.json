@@ -1,0 +1,50 @@
+[
+  {
+    "id": "1",
+    "slug": "secret-of-safi-moroccan-clay",
+    "title": "The Secret of Safi Clay: Why Moroccan Ceramics Endure for Generations",
+    "excerpt": "Discover how the mineral-rich earth of Safi, Morocco became the foundation of North Africa's most revered ceramic artistry.",
+    "date": "October 2026",
+    "readTime": "4 min read",
+    "coverImage": "images/artisan.webp",
+    "author": "Master El Mostafa",
+    "tags": ["Heritage", "Safi Clay", "Artisanship"],
+    "paragraphs": [
+      "In the coastal Moroccan city of Safi, the soil carries a distinctive composition of red clay and minerals that has been shaped by artisans for over a thousand years.",
+      "Growing up with a potter brother and a baker father, I learned that clay reacts to the air just as bread responds to warmth. It requires patient kneading to eliminate micro-air pockets before it ever touches the wheel.",
+      "Today in our Agadir atelier, we bring this same uncompromising reverence for raw earth into every tajine, vase, and bowl we shape."
+    ]
+  },
+  {
+    "id": "2",
+    "slug": "raw-brute-pottery-vs-glazed-ceramics",
+    "title": "Raw (Brute) Pottery vs Kiln Glazed: A Guide to Natural Moroccan Ceramics",
+    "excerpt": "Understand the tactile beauty of raw terracotta pottery, natural drying cycles, and when to choose traditional oxide glazing.",
+    "date": "October 2026",
+    "readTime": "3 min read",
+    "coverImage": "images/workshop.webp",
+    "author": "ZWEN Poterie Team",
+    "tags": ["Technique", "Raw Pottery", "Glazing"],
+    "paragraphs": [
+      "Raw pottery, known locally as 'argile brute', is clay that has been formed, refined, and naturally dried without vitreous enamel coating. It retains an earthy, tactile warmth that connects you directly to nature.",
+      "Because raw clay breathes, it requires approximately 3 days of slow, shaded air drying. Rushing this natural process with artificial heat can cause microscopic stress cracks.",
+      "For pieces designed to hold liquids or vibrant decor, our mineral oxide glazes (such as our signature Blue Oxide) undergo high-temperature kiln firing, sealing the clay with permanent vibrancy."
+    ]
+  },
+  {
+    "id": "3",
+    "slug": "first-pottery-wheel-workshop-agadir",
+    "title": "What to Expect at Your First Hands-On Pottery Workshop in Agadir",
+    "excerpt": "Curious about sitting at the potter's wheel? Here is everything you need to know before your first hands-on session in our studio.",
+    "date": "October 2026",
+    "readTime": "5 min read",
+    "coverImage": "images/workshop.webp",
+    "author": "Master El Mostafa",
+    "tags": ["Workshops", "Activities in Agadir", "Beginners"],
+    "paragraphs": [
+      "Many visitors hesitate before booking their first workshop, fearing they lack artistic talent. But pottery is not about drawing; it is about centering your breath and feeling rotational physics through your fingertips.",
+      "At ZWEN POTERIE in Agadir, every workshop starts with an authentic introduction to our fabrication steps: grounding, centering the clay mound, opening the hollow core, and pulling the walls upward.",
+      "During your dedicated hands-on wheel session, you will leave with completed pieces and the unforgettable feeling of wet clay dancing under your palms."
+    ]
+  }
+]

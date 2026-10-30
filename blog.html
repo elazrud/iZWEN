@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- =======================================================================
+       ZWEN POTERIE — DYNAMIC BLOG & JOURNAL
+       Authentic Moroccan Pottery Studio & Showroom | Agadir, Morocco
+       
+       CLIENT NOTE:
+       This page dynamically loads all articles from "posts.json".
+       To add or edit blog posts, simply update the "posts.json" file!
+       ======================================================================= -->
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  
+  <title>Artisan Journal & Guides — ZWEN POTERIE Agadir</title>
+  <meta name="description" content="Read stories, ceramic care guides, and pottery insights from Master El Mostafa El Azroud at ZWEN POTERIE in Agadir, Morocco.">
+  <meta name="keywords" content="Moroccan pottery blog, Safi clay, Agadir studio, pottery workshop guide">
+  <meta name="author" content="ZWEN POTERIE">
+  <meta name="theme-color" content="#4A3026">
+  <meta name="robots" content="index, follow">
+
+  <!-- International SEO / Hreflang Tags -->
+  <link rel="canonical" href="https://zwenpoterie.com/blog.html">
+  <link rel="alternate" hreflang="en" href="https://zwenpoterie.com/blog.html">
+  <link rel="alternate" hreflang="fr" href="https://zwenpoterie.com/fr/blog.html">
+  <link rel="alternate" hreflang="es" href="https://zwenpoterie.com/es/blog.html">
+  <link rel="alternate" hreflang="ar" href="https://zwenpoterie.com/ar/blog.html">
+  <link rel="alternate" hreflang="x-default" href="https://zwenpoterie.com/blog.html">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="images/svg-favicon.svg?v=3">
+  <link rel="alternate icon" type="image/png" href="images/logo-icon.png">
+  <link rel="apple-touch-icon" href="images/svg-favicon.svg?v=3">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://zwenpoterie.com/blog.html">
+  <meta property="og:title" content="Artisan Journal — ZWEN POTERIE Agadir">
+  <meta property="og:description" content="Discover stories of clay, kiln firing, and ancestral craft in Agadir.">
+  <meta property="og:image" content="https://zwenpoterie.com/images/artisan.webp">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Space+Grotesk:wght@400;500;600&family=Syne:wght@500;700;800&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    .blog-hero {
+      padding-top: calc(var(--header-height) + 3.5rem);
+      padding-bottom: 3rem;
+      text-align: center;
+      background: radial-gradient(circle at 50% 0%, rgba(122, 75, 58, 0.3) 0%, transparent 70%), var(--color-bg);
+    }
+    .blog-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+      margin-bottom: 5rem;
+    }
+    @media (min-width: 680px) {
+      .blog-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media (min-width: 1040px) {
+      .blog-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+    .blog-card {
+      background: var(--color-bg-card);
+      border: 1px solid var(--color-border);
+      border-radius: var(--border-radius-card);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+    }
+    .blog-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-hover);
+    }
+    .blog-card-media {
+      aspect-ratio: 16 / 10;
+      background: var(--color-light-grey);
+      overflow: hidden;
+    }
+    .blog-card-media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.9s var(--ease-luxury);
+    }
+    .blog-card:hover .blog-card-media img {
+      transform: scale(1.06);
+    }
+    .blog-card-body {
+      padding: 1.75rem;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+    .blog-card-meta {
+      font-size: 0.8rem;
+      color: var(--color-text-muted);
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+    .blog-card-title {
+      font-family: var(--font-serif);
+      font-size: 1.3rem;
+      color: var(--color-text-main);
+      line-height: 1.3;
+    }
+    .blog-card-excerpt {
+      font-size: 0.9rem;
+      color: var(--color-text-muted);
+      line-height: 1.6;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="custom-cursor-dot" aria-hidden="true"></div>
+  <div class="custom-cursor-ring" aria-hidden="true"></div>
+
+  <!-- STICKY HEADER -->
+  <header class="site-header" id="siteHeader">
+    <div class="container header-container">
+      <a href="index.html" class="header-logo" aria-label="ZWEN POTERIE Homepage">
+        <img src="images/svg-logo.svg" alt="ZWEN POTERIE Agadir Logo" width="160" height="48" onerror="this.onerror=null; this.src='images/logo.png';">
+        <span class="logo-fallback-text">ZWEN POTERIE</span>
+      </a>
+
+      <nav class="nav-desktop" aria-label="Main Navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="showroom.html" class="nav-link">Showroom</a>
+        <a href="workshops.html" class="nav-link">Workshops</a>
+        <a href="our-story.html" class="nav-link">Our Story</a>
+      </nav>
+
+      <div class="header-actions">
+        <!-- Desktop Language Switcher (Luxury Capsule adjacent to Booking Button) -->
+        <div class="lang-switcher" aria-label="Language selection">
+          <span class="lang-item active" aria-current="page">EN</span>
+          <span class="lang-separator">|</span>
+          <a href="fr/blog.html" class="lang-item" aria-label="Version française">FR</a>
+          <span class="lang-separator">|</span>
+          <a href="es/blog.html" class="lang-item" aria-label="Versión en español">ES</a>
+          <span class="lang-separator">|</span>
+          <a href="ar/blog.html" class="lang-item" aria-label="النسخة العربية">AR</a>
+        </div>
+
+        <a href="workshops.html" class="btn btn-primary desktop-header-btn">
+          Book Workshop
+        </a>
+        <!-- Mobile Header Language Switcher (Direct access next to menu icon) -->
+        <div class="mobile-header-lang" aria-label="Language selection">
+          <span class="lang-item active" aria-current="page">EN</span>
+          <span class="lang-separator">|</span>
+          <a href="fr/blog.html" class="lang-item" aria-label="Version française">FR</a>
+          <span class="lang-separator">|</span>
+          <a href="es/blog.html" class="lang-item" aria-label="Versión en español">ES</a>
+          <span class="lang-separator">|</span>
+          <a href="ar/blog.html" class="lang-item" aria-label="النسخة العربية">AR</a>
+        </div>
+        <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-nav-overlay" id="mobileNav" aria-hidden="true">
+    <div>
+      <span class="mono-tag" style="margin-bottom: 1.5rem;">Menu Navigation</span>
+      <nav class="mobile-nav-links">
+        <a href="index.html" class="mobile-nav-link">01. Home</a>
+        <a href="showroom.html" class="mobile-nav-link">02. Pottery Showroom</a>
+        <a href="workshops.html" class="mobile-nav-link">03. Workshop & Booking</a>
+        <a href="our-story.html" class="mobile-nav-link">04. Our Heritage Story</a>
+      </nav>
+      <!-- Prominent Mobile Menu 'Book Workshop' CTA -->
+      <div class="mobile-menu-cta">
+        <a href="workshops.html" class="btn btn-primary">
+          <span>Book Workshop</span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+        </a>
+      </div>
+
+      <!-- Mobile Language Switcher -->
+      <div class="mobile-lang-switcher" aria-label="Language selection">
+        <span class="lang-item active" aria-current="page">EN</span>
+        <span class="lang-separator">|</span>
+        <a href="fr/blog.html" class="lang-item" aria-label="Version française">FR</a>
+          <span class="lang-separator">|</span>
+          <a href="es/blog.html" class="lang-item" aria-label="Versión en español">ES</a>
+          <span class="lang-separator">|</span>
+          <a href="ar/blog.html" class="lang-item" aria-label="النسخة العربية">AR</a>
+      </div>
+    </div>
+    <div class="mobile-nav-footer">
+      <div class="mobile-contact-item">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--color-brown); flex-shrink: 0;" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+        <span><strong>Location:</strong> Agadir, Morocco</span>
+      </div>
+      <div class="mobile-contact-item">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--color-brown); flex-shrink: 0;" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+        <span><strong>WhatsApp:</strong> <a href="https://wa.me/212657110942" style="color: var(--color-brown); font-weight: 600;">+212 657 110 942</a></span>
+      </div>
+      <div class="mobile-contact-item">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--color-brown); flex-shrink: 0;" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
+        <span><strong>Email:</strong> <a href="mailto:zwenpoterie@gmail.com" style="color: var(--color-brown);">zwenpoterie@gmail.com</a></span>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <section class="blog-hero">
+      <div class="container" data-reveal>
+        <span class="mono-tag">Artisan Journal</span>
+        <h1 style="font-size: var(--text-h1); margin: 0.75rem 0 1rem;">Stories of Clay & Fire</h1>
+        <p style="color: var(--color-text-muted); max-width: 620px; margin: 0 auto; line-height: 1.7;">
+          Insights into traditional Moroccan pottery techniques, workshop reflections, and ceramic care from our Agadir studio.
+        </p>
+      </div>
+    </section>
+
+    <!-- DYNAMIC BLOG POSTS CONTAINER (Populated via posts.json) -->
+    <section class="container">
+      <div class="blog-grid" id="blogGridContainer">
+        <!-- Rendered via JavaScript -->
+        <noscript>
+          <div style="text-align: center; padding: 3rem; grid-column: 1 / -1;">
+            <p>Please enable JavaScript to view our latest articles dynamically loaded from posts.json.</p>
+          </div>
+        </noscript>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer" id="contact">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col footer-brand">
+          <a href="index.html" aria-label="ZWEN POTERIE">
+            <img src="images/svg-logo.svg" alt="ZWEN POTERIE White Logo" class="footer-logo" width="160" height="48" onerror="this.onerror=null; this.src='images/logo.png';">
+          </a>
+          <p>Traditional Moroccan pottery showroom and authentic artisan workshop studio in Agadir, Morocco.</p>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-heading">Navigate</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="showroom.html">Pottery Showroom</a></li>
+            <li><a href="workshops.html">Workshops & Booking</a></li>
+            <li><a href="our-story.html">Our Heritage Story</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-heading">Studio Info</h4>
+          <ul class="footer-links">
+            <li><span style="color: rgba(255,255,255,0.65);">Agadir, Morocco</span></li>
+            <li><span style="color: rgba(255,255,255,0.65);">Workshops: By Appointment</span></li>
+            <li><span style="color: rgba(255,255,255,0.65);">Pickup: ~3 Days for Raw Clay</span></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-heading">Connect With Us</h4>
+          
+          <div class="footer-contact-item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            <a href="https://wa.me/212657110942" target="_blank" rel="noopener noreferrer">+212 657 110 942</a>
+          </div>
+
+          <div class="footer-contact-item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
+            <a href="mailto:zwenpoterie@gmail.com">zwenpoterie@gmail.com</a>
+          </div>
+
+          <div class="footer-contact-item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line></svg>
+            <a href="https://instagram.com/zwenpoterie" target="_blank" rel="noopener noreferrer">@zwenpoterie</a>
+          </div>
+
+          <div class="footer-contact-item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            <a href="https://share.google/PlxCKu5xTYNA8g34h" target="_blank" rel="noopener noreferrer">Find us on Google Maps</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 ZWEN POTERIE. All rights reserved. Artisan Craftsmanship in Agadir, Morocco.</p>
+        <p>Traditional Pottery &bull; Crafted with Soul</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp FAB -->
+  <a href="https://wa.me/212657110942?text=Hello%20ZWEN%20Poterie%2C%20I%20read%20your%20artisan%20journal%20and%20have%20a%20question!" class="whatsapp-fab" target="_blank" rel="noopener noreferrer" aria-label="Direct WhatsApp Chat with ZWEN Poterie">
+    <span class="whatsapp-tooltip">Chat with us on WhatsApp</span>
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+  </a>
+
+  <!-- JavaScript to fetch posts.json dynamically -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const container = document.getElementById('blogGridContainer');
+      if (!container) return;
+
+      fetch('posts.json')
+        .then(res => {
+          if (!res.ok) throw new Error('HTTP ' + res.status);
+          return res.json();
+        })
+        .then(posts => {
+          container.innerHTML = posts.map(post => `
+            <article class="blog-card" data-reveal>
+              <div class="blog-card-media">
+                <img src="${post.coverImage}" alt="${post.title}" loading="lazy" decoding="async">
+              </div>
+              <div class="blog-card-body">
+                <div>
+                  <div class="blog-card-meta">
+                    <span>${post.date}</span>
+                    <span>&bull;</span>
+                    <span>${post.readTime}</span>
+                  </div>
+                  <h2 class="blog-card-title" style="margin-top:0.5rem;">${post.title}</h2>
+                  <p class="blog-card-excerpt" style="margin-top:0.5rem;">${post.excerpt}</p>
+                </div>
+                <div style="margin-top: 1rem;">
+                  <a href="blog-template.html?id=${encodeURIComponent(post.id)}&amp;post=${encodeURIComponent(post.slug)}" class="btn btn-outline" style="width:100%; font-size:0.8rem; padding:0.6rem 1rem; justify-content:center; gap:0.5rem;">
+                    <span>Read Full Story</span>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+                  </a>
+                </div>
+              </div>
+            </article>
+          `).join('');
+          requestAnimationFrame(() => {
+            container.querySelectorAll('[data-reveal]').forEach((el, idx) => {
+              if (window.observeRevealElement) {
+                window.observeRevealElement(el);
+              } else {
+                setTimeout(() => el.classList.add('is-revealed'), idx * 90);
+              }
+            });
+          });
+        })
+        .catch(err => {
+          console.error('Error fetching blog posts:', err);
+          container.innerHTML = '<p style="text-align:center; grid-column:1/-1;">Articles are temporarily loading. Please check back shortly.</p>';
+        });
+    });
+  </script>
+
+  <script src="main.js"></script>
+</body>
+</html>

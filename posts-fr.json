@@ -1,0 +1,50 @@
+[
+  {
+    "id": "1",
+    "slug": "le-secret-de-largile-de-safi",
+    "title": "Le Secret de l'Argile de Safi : Pourquoi la Céramique Marocaine Traverse les Générations",
+    "excerpt": "Découvrez comment la terre riche en minéraux de Safi au Maroc est devenue le berceau de l'art céramique le plus vénéré d'Afrique du Nord.",
+    "date": "Octobre 2026",
+    "readTime": "4 min de lecture",
+    "coverImage": "../images/artisan.webp",
+    "author": "Maître El Mostafa",
+    "tags": ["Héritage", "Argile de Safi", "Artisanat d'Art"],
+    "paragraphs": [
+      "Dans la ville côtière de Safi au Maroc, le sol recèle une composition unique d'argile rouge et de minéraux façonnée par les maîtres artisans depuis plus d'un millénaire.",
+      "Ayant grandi auprès d'un frère aîné potier et d'un père boulanger, j'ai appris que l'argile réagit à l'air tout comme le pain répond à la chaleur. Elle exige un pétrissage patient pour éliminer la moindre micro-bulle d'air avant même d'effleurer le tour.",
+      "Aujourd'hui dans notre atelier d'Agadir, nous apportons ce même respect absolu pour la terre brute dans chaque tajine, vase et bol que nous façonnons à la main."
+    ]
+  },
+  {
+    "id": "2",
+    "slug": "poterie-brute-vs-ceramique-emaillee",
+    "title": "Poterie Brute vs Céramique Émaillée : Le Guide de la Poterie Naturelle Marocaine",
+    "excerpt": "Appréhendez la beauté tactile de la terre cuite brute, les cycles de séchage naturel et le choix des émaux traditionnels aux oxydes.",
+    "date": "Octobre 2026",
+    "readTime": "3 min de lecture",
+    "coverImage": "../images/workshop.webp",
+    "author": "L'Équipe ZWEN Poterie",
+    "tags": ["Technique", "Poterie Brute", "Émaillage"],
+    "paragraphs": [
+      "La poterie brute, connue sous le nom d'argile brute, est une terre qui a été façonnée, affinée et séchée naturellement à l'air libre sans glaçure vitrifiée. Elle conserve une chaleur minérale et tactile qui vous relie directement à la matière originelle.",
+      "Parce que l'argile brute respire, elle nécessite environ 3 jours de séchage lent et ombragé. Précipiter ce processus naturel à l'aide d'une source artificielle de chaleur provoquerait des microfissures de tension.",
+      "Pour les pièces destinées à accueillir des liquides ou arborer des décors éclatants, nos émaux aux oxydes minéraux (tels que notre Oxyde Bleu signature) subissent une cuisson à haute température au four, vitrifiant la terre d'une brillance inaltérable."
+    ]
+  },
+  {
+    "id": "3",
+    "slug": "premier-atelier-poterie-tour-agadir",
+    "title": "À Quoi Vous Attendre Lors de Votre Premier Atelier de Poterie au Tour à Agadir",
+    "excerpt": "Curieux de vous asseoir au tour de potier ? Voici tout ce qu'il faut savoir avant votre première séance pratique dans notre atelier.",
+    "date": "Octobre 2026",
+    "readTime": "5 min de lecture",
+    "coverImage": "../images/workshop.webp",
+    "author": "Maître El Mostafa",
+    "tags": ["Ateliers", "Activités à Agadir", "Débutants"],
+    "paragraphs": [
+      "De nombreux visiteurs hésitent avant de réserver leur premier atelier, craignant de manquer d'habileté artistique. Mais la poterie n'est pas une question de dessin ; il s'agit d'aligner sa respiration et d'apprivoiser la force rotative au bout de ses doigts.",
+      "Chez ZWEN POTERIE à Agadir, chaque atelier débute par une introduction concrète aux étapes de fabrication : le calage de la terre, le centrage de la motte d'argile, l'ouverture du cœur creux et le tirage vertical des parois.",
+      "Pendant votre séance dédiée au tour, vous repartirez avec vos propres créations terminées et la sensation inoubliable de l'argile vivante qui danse entre vos paumes."
+    ]
+  }
+]

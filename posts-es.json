@@ -1,0 +1,50 @@
+[
+  {
+    "id": "1",
+    "slug": "el-secreto-del-barro-de-safi",
+    "title": "El Secreto del Barro de Safi: Por Qué la Cerámica Marroquí Perdura por Generaciones",
+    "excerpt": "Descubra cómo la tierra rica en minerales de Safi, Marruecos, se convirtió en la cuna del arte cerámico más venerado del norte de África.",
+    "date": "Octubre 2026",
+    "readTime": "4 min de lectura",
+    "coverImage": "../images/artisan.webp",
+    "author": "Maestro El Mostafa",
+    "tags": ["Herencia", "Barro de Safi", "Artesanía"],
+    "paragraphs": [
+      "En la ciudad costera marroquí de Safi, el suelo alberga una composición única de arcilla roja y minerales que ha sido moldeada por maestros artesanos durante más de mil años.",
+      "Al crecer junto a un hermano mayor alfarero y un padre panadero, aprendí que la arcilla reacciona al aire tal como el pan responde al calor. Exige un amasado paciente para eliminar cualquier microburbuja de aire antes de tocar el torno.",
+      "Hoy en nuestro taller de Agadir, trasladamos esta misma devoción incondicional por la tierra pura a cada tajín, jarrón y cuenco que moldeamos a mano."
+    ]
+  },
+  {
+    "id": "2",
+    "slug": "ceramica-bruta-vs-esmaltada",
+    "title": "Cerámica Bruta vs Esmaltada al Horno: Guía de la Alfarería Natural Marroquí",
+    "excerpt": "Comprenda la belleza táctil del barro cocido natural, los ciclos de secado al aire y cuándo elegir los esmaltes minerales tradicionales.",
+    "date": "Octubre 2026",
+    "readTime": "3 min de lectura",
+    "coverImage": "../images/workshop.webp",
+    "author": "Equipo ZWEN Poterie",
+    "tags": ["Técnica", "Cerámica Bruta", "Esmaltado"],
+    "paragraphs": [
+      "La cerámica bruta, conocida localmente como 'argile brute', es arcilla que ha sido moldeada, afinada y secada naturalmente al aire sin recubrimiento vítreo. Conserva una calidez terrosa y táctil que le conecta directamente con la naturaleza.",
+      "Debido a que la arcilla natural respira, requiere aproximadamente 3 días de secado lento y sombreado. Acelerar este proceso natural con calor artificial provocaría microfisuras de tensión.",
+      "Para las piezas diseñadas para contener líquidos o lucir una decoración vibrante, nuestros esmaltes de óxidos minerales (como nuestro distintivo Óxido Azul) se someten a cocción a alta temperatura en el horno, sellando la arcilla con un brillo permanente."
+    ]
+  },
+  {
+    "id": "3",
+    "slug": "primer-taller-de-torno-en-agadir",
+    "title": "Qué Esperar de su Primer Taller Práctico de Torno en Agadir",
+    "excerpt": "¿Siente curiosidad por sentarse al torno de alfarero? Aquí tiene todo lo que necesita saber antes de su primera sesión práctica en nuestro estudio.",
+    "date": "Octubre 2026",
+    "readTime": "5 min de lectura",
+    "coverImage": "../images/workshop.webp",
+    "author": "Maestro El Mostafa",
+    "tags": ["Talleres", "Actividades en Agadir", "Principiantes"],
+    "paragraphs": [
+      "Muchos visitantes dudan antes de reservar su primer taller temiendo carecer de talento artístico. Pero la alfarería no se trata de dibujar; se trata de acompasar la respiración y sentir la física rotacional a través de las yemas de los dedos.",
+      "En ZWEN POTERIE en Agadir, cada taller comienza con una introducción auténtica a nuestros pasos de fabricación: asentar el barro, centrar la masa de arcilla, abrir el núcleo hueco y elevar las paredes verticalmente.",
+      "Durante su sesión dedicada al torno, saldrá con sus propias piezas terminadas y la sensación inolvidable de la arcilla viva danzando entre sus palmas."
+    ]
+  }
+]
